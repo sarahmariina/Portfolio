@@ -42,6 +42,14 @@ body {
 }
 @media only screen and (max-width: 750px) {
   /*Specifikationer for navbar til mobil*/
+  .logo {
+    width: 50%;
+    margin-top: 50px;
+   }
+   .Illustration {
+    width: 330px;
+    height: 200px;
+   }
   .navbar {
     bottom: 0;
     background-color: transparent;
