@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed");
 
+
+/* Gælder globalt, har ingen definerede skærmstørrelse */
 header {
   background-color: #e9a28c;
 }
@@ -48,83 +50,37 @@ body {
   padding: 5px;
 }
 
-@media only screen and (max-width: 750px) {
+.logo {
+  width: 30%;
+  margin-top: 15px;
+}
 
-  /*Specifikationer for navbar til mobil*/
-  .logo {
-    width: 50%;
-    margin-top: 50px;
-  }
-
+/* Specikationer til helt små devices */
+@media only screen and (min-width: 360px) {
   .Illustration {
-    width: 260px;
-    height: 130px;
-    margin-left: 100px;
+    width: 205px;
   }
 
-  .navbar {
-    bottom: 0;
-    background-color: transparent;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding-left: 0px;
-    margin-bottom: 0px;
-  }
-
-  .navbar li a {
-    padding: 8px 16px;
-    font-size: 18px;
-  }
-
-  .portfolios {
-    font-style: italic;
-    text-align: center;
-  }
-
-  .portfolio1,
-  .portfolio2,
-  .portfolio3 {
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    margin-bottom: 20px;
+  .social img {
+    width: 30px;
+    padding: 5px;
   }
 }
 
-@media only screen and (min-width: 750px) {
-  .Illustration {
-    width: 530px;
-    height: 400px;
-    display: block;
-    margin-left: auto;
-    padding-top: 50px;
-  }
+.Illustration {
+  width: 220px;
+  height: 120px;
+  margin-left: 131px;
+}
 
-  .portfolios {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto 50px;
-    font-style: italic;
-    text-align: center;
-    margin-bottom: 50px;
-  }
+.navbar li a {
+  padding: 8px 16px;
+  font-size: 18px;
+}
 
-  .portfolios a {
-    background-color: transparent;
-    color: #fff;
-    border: 3px solid;
-    padding: 0.5rem;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.5s ease-out;
-  }
-
-  .portfolios a:hover,
-  .portfolios a:focus {
-    background-color: #fff;
-    color: #e9a28c;
-  }
+.portfolios {
+  font-style: italic;
+  text-align: center;
 }
 
 .portfolio1 {
@@ -135,7 +91,6 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15px;
 }
 
 .portfolio2 {
@@ -146,7 +101,6 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15px;
 }
 
 .portfolio3 {
@@ -157,7 +111,6 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15px;
 }
 
 .introtekst {
@@ -234,11 +187,46 @@ input[type="submit"]:hover {
   width: 75%;
 }
 
-/** 
-https://www.w3schools.com/css/css_link.asp
-*/
-
 .scrolldown {
   margin: 0 auto;
   display: block;
 }
+
+/* Specifikationer til moderne mobil devices*/
+@media only screen and (min-width: 750px) {
+  .Illustration {
+    width: 530px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    padding-top: 50px;
+  }
+
+  .portfolios {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .portfolios a {
+    background-color: transparent;
+    color: #fff;
+    border: 3px solid;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+  }
+
+  .portfolios a:hover {
+    background-color: #fff;
+    color: #e9a28c;
+  }
+}
+
+/** 
+https://www.w3schools.com/css/css_link.asp
+*/
